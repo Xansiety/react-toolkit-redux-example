@@ -11,8 +11,12 @@ export const todosApi = createApi({
     getTodos: builder.query({
       query: () => `/todos`,
     }),
+    getTodoById: builder.query({
+        query: (todoId) => `/todos/${todoId}`,
+      }),
+
   }),
 });
 
 // RTK generar por default un customHooks el cual deberemomos de exponer
-export const { useGetTodosQuery } = todosApi;
+export const { useGetTodosQuery, useGetTodoByIdQuery } = todosApi;
