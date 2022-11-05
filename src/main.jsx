@@ -4,13 +4,15 @@ import ReactDOM from "react-dom/client";
 import "./index.css";
 import { Provider } from "react-redux";
 import { store } from "./store";
-import { PokemonApp } from "./PokemonApp";
+import { TodoApp } from "./TodoApp";
+// import { PokemonApp } from "./PokemonApp";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <Provider store={store}>
       {/* <App /> */}
-      <PokemonApp />
+      {/* <PokemonApp /> */}
+      <TodoApp />
     </Provider>
   </React.StrictMode>
 );
